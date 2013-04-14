@@ -84,7 +84,7 @@ ssize_t rio_readnb(rio_t *rp, void *usrbuf, size_t n)
 
   while (nleft > 0) {
     if ((nread = rio_read(rp, bufp, nleft)) < 0) {
-      if (errno == EINTR) /* INterrupted by sig handler return Call read() again */
+      if (errno == EINTR) /* Interrupted by sig handler return Call read() again */
 	nread = 0;
       else
 	return -1;
